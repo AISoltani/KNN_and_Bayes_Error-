@@ -4,6 +4,7 @@ import numpy as np
 from data_gen import data_gen
 from scipy.spatial.distance import cdist
 from knn import knn
+
 n = 6000
 d = 2
 sigma = 1
@@ -19,6 +20,7 @@ testX,testy =  data_gen (n , d, sigma, w, b)
 for k in k_list:
     y_hat,error = knn(trainX, trainy, testX, k, dist, testy)
     print("k ",k,"Error %: ", error)
+    
 ############ data-gen functin
 # import numpy as np
 # def  data_gen (n , d, sigma, w, b):
