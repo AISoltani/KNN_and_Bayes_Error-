@@ -1,3 +1,5 @@
+# Import
+
 import numpy as np
 from data_gen import data_gen
 from Bayes import Bayes
