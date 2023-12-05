@@ -1,4 +1,5 @@
 import numpy as np
+import math
 
 def  data_gen (n , d, sigma, w, b):
     
