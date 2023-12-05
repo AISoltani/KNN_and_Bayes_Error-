@@ -8,15 +8,19 @@ def knn(trainX, trainy, testX, k, dist, testy):
     trainy = np.reshape (trainy,-1)
     testy = testy.T
     n = trainX.shape[0]
+    
 # distance of text data from the trained data
 # Each row is the distance of each test data from all of the trained data
     Dist_Matrix = cdist(testX,trainX, metric='minkowski', p= dist)
     CLassy_Mins_Dis = np.zeros([k,n])
     for i in range(k):
+        
     # Each element of following vector (MIN) is 
     # the min of each test data from trained data is determined
         MIN = np.min(Dist_Matrix,axis=1)
-        MIN = np.reshape(MIN,(n,1)) # change the row vector to column vector
+        MIN = np.reshape(MIN,(n,1)) 
+        # change the row vector to column vector
+        
     # the index of those mins 
         index = np.where(Dist_Matrix == MIN) 
         index_x,index_y = index
