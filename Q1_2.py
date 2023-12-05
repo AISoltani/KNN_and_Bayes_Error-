@@ -13,6 +13,7 @@ w = np.zeros([1,d-1])
 w = np.insert(w,0,[1])
 w = np.reshape(w,(1,d))
 N = [10,50,100,200,300,500,800,1000,2000,5000,8000,10000,20000,50000,100000,200000,500000,1000000]
+
 Bayes_Error = []
 Bayes_Error_A = []
 for n in N:
@@ -37,6 +38,7 @@ plt.legend()
 plt.xlabel('Number of data')
 plt.ylabel('Error %')
 plt.show()
+
 ############ data-gen functin
 # def  data_gen (n , d, sigma, w, b):
 #     X = np.random.uniform(-1, 1, (n, d))
