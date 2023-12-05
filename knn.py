@@ -20,12 +20,15 @@ def knn(trainX, trainy, testX, k, dist, testy):
     # the index of those mins 
         index = np.where(Dist_Matrix == MIN) 
         index_x,index_y = index
+        
     # change the mins to inf because if k>1 we need other mins 
     # forexample ( 3rd mins 5th mins and etc.)
         Dist_Matrix[index] = np.inf
+        
     # determination of class of training y whose X has i_th min distance
         classy_min_dis = trainy[index_y]
         CLassy_Mins_Dis[i,:] = classy_min_dis
+        
 # MAX Vot by sum of class of training y of KNN
     mask = np.sum(CLassy_Mins_Dis,axis=0) > 0
     y_hat = np.zeros_like(mask,dtype=int)
