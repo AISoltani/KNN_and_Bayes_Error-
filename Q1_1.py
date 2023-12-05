@@ -12,6 +12,7 @@ w = np.insert(w,0,[1])
 w = np.reshape(w,(1,d))
 
 X_1,y_1 =  data_gen (n , d, sigma, w, b)
+
 print('X = ',X_1)
 print('y = ', y_1)
 
